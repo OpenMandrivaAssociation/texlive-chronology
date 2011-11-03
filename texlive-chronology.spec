@@ -1,3 +1,9 @@
+# revision 18994
+# category Package
+# catalog-ctan /macros/latex/contrib/chronology
+# catalog-date 2010-06-15 10:45:39 +0200
+# catalog-license lppl1.3
+# catalog-version 1.0
 Name:		texlive-chronology
 Version:	1.0
 Release:	1
@@ -47,6 +53,7 @@ to specified width.
 #- source
 %doc %{_texmfdistdir}/source/latex/chronology/chronology.dtx
 %doc %{_texmfdistdir}/source/latex/chronology/chronology.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ to specified width.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
