@@ -1,19 +1,18 @@
-# revision 18994
+# revision 29682
 # category Package
 # catalog-ctan /macros/latex/contrib/chronology
-# catalog-date 2010-06-15 10:45:39 +0200
+# catalog-date 2013-04-05 17:50:33 +0200
 # catalog-license lppl1.3
-# catalog-version 1.0
+# catalog-version 1.1
 Name:		texlive-chronology
-Version:	1.0
-Release:	2
+Version:	1.1
+Release:	1
 Summary:	Provides a horizontal timeline
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chronology
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chronology.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chronology.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chronology.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -37,34 +36,15 @@ to specified width.
 %files
 %{_texmfdistdir}/tex/latex/chronology/chronology.sty
 %doc %{_texmfdistdir}/doc/latex/chronology/README
-%doc %{_texmfdistdir}/doc/latex/chronology/README.txt
-%doc %{_texmfdistdir}/doc/latex/chronology/chronology.hd
-%doc %{_texmfdistdir}/doc/latex/chronology/chronology.pdf
-#- source
-%doc %{_texmfdistdir}/source/latex/chronology/chronology.dtx
-%doc %{_texmfdistdir}/source/latex/chronology/chronology.ins
+%doc %{_texmfdistdir}/doc/latex/chronology/example.pdf
+%doc %{_texmfdistdir}/doc/latex/chronology/example.tex
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 750202
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718058
-- texlive-chronology
-- texlive-chronology
-- texlive-chronology
-- texlive-chronology
-- texlive-chronology
-
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
