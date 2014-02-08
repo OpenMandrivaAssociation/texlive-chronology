@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-chronology
 Version:	1.0
-Release:	2
+Release:	3
 Summary:	Provides a horizontal timeline
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chronology
