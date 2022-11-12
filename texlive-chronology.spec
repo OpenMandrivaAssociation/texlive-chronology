@@ -1,12 +1,12 @@
 Name:		texlive-chronology
-Version:	1.1.1
-Release:	2
+Version:	37934
+Release:	1
 Summary:	Provides a horizontal timeline
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chronology
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chronology.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chronology.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chronology.r37934.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chronology.doc.r37934.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -19,12 +19,12 @@ unit specification, adjustable tick mark step size, and scaling
 to specified width.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -33,7 +33,7 @@ to specified width.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
