@@ -1,6 +1,6 @@
 Name:		texlive-chronology
-Version:	37934
-Release:	2
+Version:	67973
+Release:	1
 Summary:	Provides a horizontal timeline
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chronology
